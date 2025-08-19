@@ -9,62 +9,48 @@ This repository contains an implementation of a simplified GPT (Generative Pre-t
 The goal of this project is to build and train a small-scale transformer-based language model to generate text similar to the dialogues in the "Friends" series. The implementation follows the transformer architecture, including components such as multi-head attention, feed-forward networks, and positional embeddings.
 
 ---
-## Project Structure
 
+## Project Structure
+- `config/`: YAML files for training configurations and logging  
 - `data/`: Contains data-related files and the raw dataset.
 - `models/`: Includes the model architecture definition and saved models.
-- `scripts/`: Contains the main scripts for training and generating text.
-- `config/`: Stores configuration files for hyperparameters.
-- `utils/`: Utility functions for visualization and metrics.
+- `notebooks/`: Jupyter notebook for exploration and experiments  
+- `scripts/`: Contains the main scripts for training and generating text.  
+- `utils/`: Metrics computation and visualization tools  
+- `report.pdf`: Original report (in Persian)  
 
 ---
 
-## Installation
+## Setup
+Clone the repository:
+```bash
+git clone https://github.com/omidnaeej/Mini-GPT.git
+cd Mini-GPT
+```
 
-1. Clone the repository:
+## Download the dataset
 
-   ```bash
-   git clone https://github.com/omidnaeej/mini-gpt-model.git
-   cd mini-gpt-model
-   ```
+```bash
+wget https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-08/friends.csv
+```
 
-2. Install the required dependencies:
+## Install dependencies:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-3. Download the dataset:
-
-   ```bash
-   wget https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-08/friends.csv
-   ```
+---
 
 ## Usage
 
-### Training the Model
-
-To train the model, use the following command:
+Run the main script to train and test both models:
 
 ```bash
-python scripts/train.py --config config/config.yaml
+python -m scripts.main
 ```
 
-### Generating Text
-
-To generate text using the trained model:
-
-```bash
-python scripts/generate_text.py --model_path models/saved_models/model.pth
-```
-
-## Project Structure
-
-- `data/`: Contains data-related files and the raw dataset.
-- `models/`: Includes the model architecture definition and saved models.
-- `scripts/`: Contains the main scripts for training and generating text.
-- `config/`: Stores configuration files for hyperparameters.
-- `utils/`: Utility functions for visualization and metrics.
+---
 
 ## Configuration
 
@@ -76,15 +62,20 @@ The model uses the following hyperparameters (configurable in `config/config.yam
 - `learning_rate`: 1e-3
 - `n_embd`: 64
 - `n_head`: 4
+- `n_layers`: 10
+- `beam_search`: True
+- `beam_width`: 3
+- `temperature`: 1.0
+- `max_length`: 200
+
+---
 
 ## Results
 
 The trained model can generate coherent dialogues based on the "Friends" dataset. Sample outputs and detailed analysis are included in the project report.
 
+---
+
 ## Contributing
 
 Contributions are welcome. Please fork the repository and submit pull requests for any improvements.
-
-## License
-
-- [ ] This project is licensed under the MIT License. See the `LICENSE` file for details.
