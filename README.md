@@ -4,7 +4,7 @@ This repository contains an implementation of a simplified GPT (Generative Pre-t
 
 ---
 
-## Project Structure
+## Repository Contents
 - `config/`: Configuration files for training and model parameters  
 - `data/`: Data preprocessing and text loading scripts
 - `models/`: Transformer-based model definition and saved models.
