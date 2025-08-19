@@ -79,6 +79,17 @@ def main(config_path="config/config.yaml"):
                         beam_width=cfg['beam_width'], max_length=cfg['max_length'], 
                         device=device))
 
+    
+    print("\nHow can I help you?")
+    while True:
+        prompt = input("Enter your prompt: ")
+        if prompt == "exit":
+            break
+        print(generate_text(model, tokenizer, cfg['block_size'], 
+                            start_text=prompt, temperature=cfg['temperature'], 
+                            beam_width=cfg['beam_width'], max_length=cfg['max_length'], 
+                            device=device))
+
 
 if __name__=="__main__":
     main()
