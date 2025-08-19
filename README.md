@@ -6,15 +6,36 @@ This repository contains an implementation of a simplified GPT (Generative Pre-t
 
 ## Project Overview
 
-The goal of this project is to build and train a small-scale transformer-based language model to generate text similar to the dialogues in the "Friends" series. The implementation follows the transformer architecture, including components such as multi-head attention, feed-forward networks, and positional embeddings.
+#### 1. **Data Preparation**
+- Used a custom dialogue dataset from the **Friends TV series**.
+- Preprocessing includes:
+  - **Character-level tokenization** was used due to computational costs and limited resources, which simplifies the vocabulary and allows for easier training.
+  - Creating a vocabulary.
+  - Encoding text into numerical sequences.
+
+#### 2. **Model Architecture**
+- A **simplified GPT model** based on the original **Transformer architecture** from the "Attention Is All You Need" paper.
+- The model primarily consists of:
+  - **Multi-head self-attention mechanisms** to capture relationships between words in a sequence.
+  - **Position-wise feed-forward networks**.
+- An **embedding layer** and **positional encodings** are used to represent input tokens and their order.
+
+#### 3. **Training**
+- **Loss**: Typically a form of **Cross-Entropy** loss.
+- **Optimizer**: **Adam** or a similar adaptive optimizer. To be specific, I used the **AdamW** optimizer which is recommended for training transformer models.
+- The model is trained to predict the next token in a sequence, given the preceding tokens.
+
+#### 4. **Functionality**
+- The model can be used to generate new dialogue in the style of the Friends TV series.
+- It provides functionality for loading a pre-trained model and generating text based on a starting prompt.
 
 ---
 
 ## Project Structure
-- `config/`: YAML files for training configurations and logging  
-- `data/`: Contains data-related files and the raw dataset.
-- `models/`: Includes the model architecture definition and saved models.
-- `notebooks/`: Jupyter notebook for exploration and experiments  
+- `config/`: Configuration files for training and model parameters  
+- `data/`: Data preprocessing and text loading scripts
+- `models/`: Transformer-based model definition and saved models.
+- `notebooks/`: Jupyter notebook for model testing and experiments  
 - `scripts/`: Contains the main scripts for training and generating text.  
 - `utils/`: Metrics computation and visualization tools  
 - `report.pdf`: Original report (in Persian)  
@@ -44,7 +65,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the main script to train and test both models:
+Run the main script to train and test model:
 
 ```bash
 python -m scripts.main
@@ -72,7 +93,9 @@ The model uses the following hyperparameters (configurable in `config/config.yam
 
 ## Results
 
-The trained model can generate coherent dialogues based on the "Friends" dataset. Sample outputs and detailed analysis are included in the project report.
+- The model successfully learns to mimic the style and patterns of the Friends dialogue dataset.
+
+The transformer architecture with multi-head attention proves effective for text generation, producing contextually relevant text. While not perfect, the model's ability to generate coherent dialogue can be enhanced significantly by increasing the number of transformer blocks and employing practical methods like subword-level tokenization.
 
 ---
 
