@@ -2,16 +2,29 @@
 
 This repository contains an implementation of a simplified GPT (Generative Pre-trained Transformer) model as part of a deep learning assignment from the University of Tehran. The project focuses on training a language model using the "Friends" dataset, which consists of dialogues from the popular TV show.
 
-## Overview
+---
+
+## Project Overview
 
 The goal of this project is to build and train a small-scale transformer-based language model to generate text similar to the dialogues in the "Friends" series. The implementation follows the transformer architecture, including components such as multi-head attention, feed-forward networks, and positional embeddings.
+
+---
+## Project Structure
+
+- `data/`: Contains data-related files and the raw dataset.
+- `models/`: Includes the model architecture definition and saved models.
+- `scripts/`: Contains the main scripts for training and generating text.
+- `config/`: Stores configuration files for hyperparameters.
+- `utils/`: Utility functions for visualization and metrics.
+
+---
 
 ## Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/mini-gpt-model.git
+   git clone https://github.com/omidnaeej/mini-gpt-model.git
    cd mini-gpt-model
    ```
 
