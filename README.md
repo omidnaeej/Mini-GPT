@@ -95,7 +95,7 @@ The model uses the following hyperparameters (configurable in `config/config.yam
 
 - The model successfully learns to mimic the style and patterns of the Friends dialogue dataset.
 
-The transformer architecture with multi-head attention proves effective for text generation, producing contextually relevant text. While not perfect, the model's ability to generate coherent dialogue can be enhanced significantly by increasing the number of transformer blocks and employing practical methods like subword-level tokenization.
+- The transformer architecture with multi-head attention proves effective for text generation, producing contextually relevant text. While not perfect, the model's ability to generate coherent dialogue can be enhanced significantly by increasing the number of transformer blocks and employing practical methods like subword-level tokenization.
 
 ---
 
