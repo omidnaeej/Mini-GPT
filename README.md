@@ -4,6 +4,17 @@ This repository contains an implementation of a simplified GPT (Generative Pre-t
 
 ---
 
+## Project Structure
+- `config/`: Configuration files for training and model parameters  
+- `data/`: Data preprocessing and text loading scripts
+- `models/`: Transformer-based model definition and saved models.
+- `notebooks/`: Jupyter notebook for model testing and experiments  
+- `scripts/`: Contains the main scripts for training and generating text.  
+- `utils/`: Metrics computation and visualization tools  
+- `report.pdf`: Original report (in Persian)
+
+---
+
 ## Project Overview
 
 #### 1. **Data Preparation**
@@ -28,17 +39,6 @@ This repository contains an implementation of a simplified GPT (Generative Pre-t
 #### 4. **Functionality**
 - The model can be used to generate new dialogue in the style of the Friends TV series.
 - It provides functionality for loading a pre-trained model and generating text based on a starting prompt.
-
----
-
-## Project Structure
-- `config/`: Configuration files for training and model parameters  
-- `data/`: Data preprocessing and text loading scripts
-- `models/`: Transformer-based model definition and saved models.
-- `notebooks/`: Jupyter notebook for model testing and experiments  
-- `scripts/`: Contains the main scripts for training and generating text.  
-- `utils/`: Metrics computation and visualization tools  
-- `report.pdf`: Original report (in Persian)  
 
 ---
 
